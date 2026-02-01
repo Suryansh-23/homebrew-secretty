@@ -5,24 +5,35 @@
 class Secretty < Formula
   desc "macOS PTY wrapper that redacts secrets from terminal output"
   homepage "https://github.com/Suryansh-23/secretty"
-  version "0.2.0"
+  version "0.2.1"
   license "MIT"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/Suryansh-23/secretty/releases/download/v0.2.0/secretty_0.2.0_darwin_amd64.tar.gz"
-    sha256 "a17178783eec1b5b53a8b8335fd2550325945416f94b63a77ceb85d5cd1fcf61"
+    url "https://github.com/Suryansh-23/secretty/releases/download/v0.2.1/secretty_0.2.1_darwin_amd64.tar.gz"
+    sha256 "fbcde18b38658b914a76561c2a876404a5f17934dda8568b3de5c70835ea502a"
 
     def install
       bin.install "secretty"
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/Suryansh-23/secretty/releases/download/v0.2.0/secretty_0.2.0_darwin_arm64.tar.gz"
-    sha256 "96f5a80aa0b9f6f7dc5e625813f628279152e59556f17db416aff4263cfebca9"
+    url "https://github.com/Suryansh-23/secretty/releases/download/v0.2.1/secretty_0.2.1_darwin_arm64.tar.gz"
+    sha256 "76304fc83d2ddd12bce16897dcba747c0dc31bfaed568f0c78205e83b58b5315"
 
     def install
       bin.install "secretty"
     end
+  end
+
+  def caveats
+    <<~EOS
+      SecreTTY may install shell hooks. Restart your shell to apply changes:
+        exec $SHELL -l
+      Or reload your shell config:
+        source ~/.zshrc
+        source ~/.bashrc
+        source ~/.config/fish/config.fish
+    EOS
   end
 end
