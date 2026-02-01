@@ -5,21 +5,21 @@
 class Secretty < Formula
   desc "macOS PTY wrapper that redacts secrets from terminal output"
   homepage "https://github.com/Suryansh-23/secretty"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/Suryansh-23/secretty/releases/download/v0.1.0/secretty_0.1.0_darwin_amd64.tar.gz"
-    sha256 "9774081e477c9b0a788ad4faf7731ab2c5eb426c10cdca26829fe39826a904cc"
+    url "https://github.com/Suryansh-23/secretty/releases/download/v0.2.0/secretty_0.2.0_darwin_amd64.tar.gz"
+    sha256 "a17178783eec1b5b53a8b8335fd2550325945416f94b63a77ceb85d5cd1fcf61"
 
     def install
       bin.install "secretty"
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/Suryansh-23/secretty/releases/download/v0.1.0/secretty_0.1.0_darwin_arm64.tar.gz"
-    sha256 "c5b0daaae6f705fe74913a44b207bd97db63321d190ca599795bfce29cc563fd"
+    url "https://github.com/Suryansh-23/secretty/releases/download/v0.2.0/secretty_0.2.0_darwin_arm64.tar.gz"
+    sha256 "96f5a80aa0b9f6f7dc5e625813f628279152e59556f17db416aff4263cfebca9"
 
     def install
       bin.install "secretty"
