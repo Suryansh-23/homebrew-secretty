@@ -5,21 +5,21 @@
 class Secretty < Formula
   desc "macOS + Linux PTY wrapper that redacts secrets from terminal output"
   homepage "https://github.com/Suryansh-23/secretty"
-  version "0.3.0"
+  version "0.4.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Suryansh-23/secretty/releases/download/v0.3.0/secretty_0.3.0_darwin_amd64.tar.gz"
-      sha256 "4496dffe322cf3577a1e1426d29c416a18db87da03c11a8b8a0943232e4a8d5d"
+      url "https://github.com/Suryansh-23/secretty/releases/download/v0.4.0/secretty_0.4.0_darwin_amd64.tar.gz"
+      sha256 "89c5c599b0dee6cdbceb084a1cc14f50a2286a88b69c2130dcf8bd54ed9a5a72"
 
       def install
         bin.install "secretty"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Suryansh-23/secretty/releases/download/v0.3.0/secretty_0.3.0_darwin_arm64.tar.gz"
-      sha256 "7a3e6cfa0fdbbb45032337dcb4e9bacecd457edaeba0782a818cd9f2adf828fb"
+      url "https://github.com/Suryansh-23/secretty/releases/download/v0.4.0/secretty_0.4.0_darwin_arm64.tar.gz"
+      sha256 "349dd77b5da621a41d4c5ac12254f18127ffff8c3a6d9ea7ae7e769b97e445a2"
 
       def install
         bin.install "secretty"
@@ -29,15 +29,15 @@ class Secretty < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Suryansh-23/secretty/releases/download/v0.3.0/secretty_0.3.0_linux_amd64.tar.gz"
-      sha256 "49df6fbc847555460b74e8fe18038da70f77f2db25ced17d788684b3bce76b37"
+      url "https://github.com/Suryansh-23/secretty/releases/download/v0.4.0/secretty_0.4.0_linux_amd64.tar.gz"
+      sha256 "a7726a7218eb0113c484d73d3b56e1573addc84b66e4f6f20d895a7aa62d2080"
       def install
         bin.install "secretty"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Suryansh-23/secretty/releases/download/v0.3.0/secretty_0.3.0_linux_arm64.tar.gz"
-      sha256 "9fded1a500a4616a665faa00ff1eec6e9ef2c5c562503bd8696c810766e5c754"
+      url "https://github.com/Suryansh-23/secretty/releases/download/v0.4.0/secretty_0.4.0_linux_arm64.tar.gz"
+      sha256 "27e7ba94b7102e13c8147293485485d821498fde4220d36c731d8bec8f4d3a40"
       def install
         bin.install "secretty"
       end
